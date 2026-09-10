@@ -19,7 +19,7 @@ cd build
 
 cmake ..
 
-make
+cmake --build .
 
 This compiles the C++ code and produces Python extension modules (.so files) inside the build/ directory.
 
