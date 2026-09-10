@@ -11,7 +11,7 @@ Install it with:
 pip install -r requirements.txt
 
 ## 2. Create a build directory and run CMake
-From the project’s root folder (the one containing CMakeLists.txt and the python/C++ '.py'/'.cpp' source files), create a build folder and configure the project:
+From the project’s root folder (the one containing CMakeLists.txt and the python/C++ **'.py' and '.cpp'** source files), create a build folder and configure the project:
 
 mkdir build
 
