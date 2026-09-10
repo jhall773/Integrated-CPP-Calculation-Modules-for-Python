@@ -22,7 +22,7 @@ Python_and_CPP_dev/
 
 - **Header file (calculations.hpp)** declares the functions so multiple modules can include them.
 
-- **add_bindings.cpp file** is where pybind11 exposes C++ functions to Python.
+- **Bindings file (add_bindings.cpp)** is where pybind11 exposes C++ functions to Python.
 
 - **CMakeLists.txt** controls how everything is compiled.
 
