@@ -15,19 +15,18 @@ Python_and_CPP_dev/
 ├── add_bindings.cpp
 │
 └── build/
-    ├── calclib.cpython-*.so
-    └── addlib.cpython-*.so
+    └── calclib.cpython-*.so
 ```
 ## Notes on Structure:
 - **Source files (.cpp)** contain the actual C++ logic.
 
-- **Header file (.hpp)** declares the functions so multiple modules can include them.
+- **Header file (calculations.hpp)** declares the functions so multiple modules can include them.
 
 - **add_bindings.cpp file** is where pybind11 exposes C++ functions to Python.
 
 - **CMakeLists.txt** controls how everything is compiled.
 
-**build/ is generated — it’s not meant to be committed to GitHub. You can generate these yourself using the CMakeLists.txt**
+**The 'build/' folder is generated — it’s not meant to be committed to GitHub. You can generate the '.so' Python module (library) file yourself using the CMakeLists.txt**
 
 **test.py** is the Python entry point that loads the compiled modules and runs example operations.
 
