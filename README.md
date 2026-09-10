@@ -1,5 +1,5 @@
 # Project Structure
-'''
+```
 Python_and_CPP_dev/
 │
 ├── CMakeLists.txt
@@ -17,7 +17,7 @@ Python_and_CPP_dev/
 └── build/
     ├── calclib.cpython-*.so
     └── addlib.cpython-*.so
-'''
+```
 ## Notes on Structure:
 - **Source files (.cpp)** contain the actual C++ logic.
 
