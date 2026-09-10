@@ -26,7 +26,7 @@ Python_and_CPP_dev/
 
 - **CMakeLists.txt** controls how everything is compiled.
 
-**The 'build/' folder is generated — it’s not meant to be committed to GitHub. You can generate the '.so' Python module (library) file yourself using the CMakeLists.txt**
+**The 'build/' folder is generated — it’s not meant to be committed to GitHub. You can generate the 'calclibc.python-*.so' Python module (library) file yourself using the CMakeLists.txt**
 
 **test.py** is the Python entry point that loads the compiled modules and runs example operations.
 
