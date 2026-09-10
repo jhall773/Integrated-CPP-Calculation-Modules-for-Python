@@ -14,8 +14,11 @@ pip install -r requirements.txt
 From the project’s root folder (the one containing CMakeLists.txt and the source files), create a build folder and configure the project:
 
 mkdir build
+
 cd build
+
 cmake ..
+
 make
 
 This compiles the C++ code and produces Python extension modules (.so files) inside the build/ directory.
