@@ -1,10 +1,9 @@
 # Project Structure
 
 Python_and_CPP_dev/<br>
-|<br>
-├── CMakeLists.txt          # CMake configuration for building the C++ → Python modules<br>
-├── requirements.txt        # Python dependencies (including the correct pybind11 version)<br>
-├── test.py                 # Simple Python script that imports and tests the compiled modules<br>
+<t>CMakeLists.txt          # CMake configuration for building the C++ → Python modules
+ requirements.txt        # Python dependencies (including the correct pybind11 version)
+ test.py                 # Simple Python script that imports and tests the compiled modules
 │<br>
 ├── calculations.hpp        # Header declaring the calculator functions (add, subtract, multiply, divide)<br>
 ├── add.cpp                 # C++ implementation of addition<br>
