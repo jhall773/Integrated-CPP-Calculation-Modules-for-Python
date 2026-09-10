@@ -1,0 +1,1 @@
+This repository allows other to use the **CMakeLists.txt** and **CMake** to create useful pybind11 Python modules for Python programs to call C++ for more efficient vector/matrix/transformation operations.
