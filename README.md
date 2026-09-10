@@ -1,30 +1,23 @@
 # Project Structure
-
-Python_and_CPP_dev/<br>
-CMakeLists.txt          # CMake configuration for building the C++ → Python modules
-
-requirements.txt        # Python dependencies (including the correct pybind11 version)
-
-test.py                 # Simple Python script that imports and tests the compiled modules
-
-
-calculations.hpp        # Header declaring the calculator functions (add, subtract, multiply, divide)
-
-add.cpp                 # C++ implementation of addition
-
-subtract.cpp            # C++ implementation of subtraction
-
-multiply.cpp            # C++ implementation of multiplication
-
-divide.cpp              # C++ implementation of division (using std::optional for safe division)
-
-
-add_bindings.cpp        # pybind11 bindings exposing add/sub/mul/div to Python<br>
-
-build/                  # Created by CMake; contains compiled .so Python modules<br>
-
- calclib.cpython-*.so
- addlib.cpython-*.so
+'''
+Python_and_CPP_dev/
+│
+├── CMakeLists.txt
+├── requirements.txt
+├── test.py
+│
+├── calculations.hpp
+├── add.cpp
+├── subtract.cpp
+├── multiply.cpp
+├── divide.cpp
+│
+├── add_bindings.cpp
+│
+└── build/
+    ├── calclib.cpython-*.so
+    └── addlib.cpython-*.so
+'''
 ## Notes on Structure:
 - **Source files (.cpp)** contain the actual C++ logic.
 
