@@ -1,3 +1,35 @@
+# Project Structure
+
+Python_and_CPP_dev/
+│
+├── CMakeLists.txt          # CMake configuration for building the C++ → Python modules
+├── requirements.txt        # Python dependencies (including the correct pybind11 version)
+├── test.py                 # Simple Python script that imports and tests the compiled modules
+│
+├── calculations.hpp        # Header declaring the calculator functions (add, subtract, multiply, divide)
+├── add.cpp                 # C++ implementation of addition
+├── subtract.cpp            # C++ implementation of subtraction
+├── multiply.cpp            # C++ implementation of multiplication
+├── divide.cpp              # C++ implementation of division (using std::optional for safe division)
+│
+├── add_bindings.cpp        # pybind11 bindings exposing add/sub/mul/div to Python
+│
+└── build/                  # Created by CMake; contains compiled .so Python modules
+    ├── calclib.cpython-*.so
+    └── addlib.cpython-*.so
+## Notes on Structure:
+- **Source files (.cpp)** contain the actual C++ logic.
+
+- **Header file (.hpp)** declares the functions so multiple modules can include them.
+
+- **add_bindings.cpp file** is where pybind11 exposes C++ functions to Python.
+
+- **CMakeLists.txt** controls how everything is compiled.
+
+**build/ is generated — it’s not meant to be committed to GitHub. You can generate these yourself using the CMakeLists.txt**
+
+**test.py** is the Python entry point that loads the compiled modules and runs example operations.
+
 # Introduction
 I created this repository while teaching myself how to build **Python extension modules in C++ using pybind11 and CMake**. The goal isn’t to provide a production‑ready package, but to document the steps, structure, and patterns that helped me understand how Python can call into C++ for faster numerical operations. If you’re learning the same tools, feel free to explore or reuse the examples here.
 
