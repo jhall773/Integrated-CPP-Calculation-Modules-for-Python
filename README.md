@@ -1,6 +1,20 @@
 # Introduction
 I created this repository while teaching myself how to build **Python extension modules in C++ using pybind11 and CMake**. The goal isn’t to provide a production‑ready package, but to document the steps, structure, and patterns that helped me understand how Python can call into C++ for faster numerical operations. If you’re learning the same tools, feel free to explore or reuse the examples here.
 
+# Note on CMakeLists.txt
+The CMakeLists.txt shown here is for **Linux**. **For Windows, some of CMake may not default to the C++ 17 standard. please use this CMakeLists.txt specification below**:
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+project(CalcLib)
+
+set(pybind11_DIR "C:/Users/joebu/pybind11_install/share/cmake/pybind11")
+find_package(pybind11 CONFIG REQUIRED)
+
+pybind11_add_module(calclib add_bindings.cpp add.cpp multiply.cpp subtract.cpp divide.cpp)
+
 # Project Structure
 ```
 Python_and_CPP_dev/
