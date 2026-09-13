@@ -4,7 +4,7 @@ I created this repository while teaching myself how to build **Python extension 
 # Note on CMakeLists.txt
 The CMakeLists.txt shown in this repository is for **Linux**. 
 
-**For Windows, some of CMake may not default to the C++ 17 standard. please use this CMakeLists.txt specification below**:
+**For Windows, some of CMake may not default to the C++ 17 standard. Please use this CMakeLists.txt specification below**:
 cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
