@@ -43,15 +43,18 @@ Install it with:
 pip install -r requirements.txt
 
 ## 2. Create a build directory and run CMake
+Note: For Windows, you will likely need to follow these steps while using the "Visual Studio 2026 Developer Command Prompt". I used "v18.8.2".
 From the project’s root folder (the one containing CMakeLists.txt and the Python/C++ **'.py' and '.cpp'** source files), create a build folder and configure the project:
 
 mkdir build
 
 cd build
 
-cmake ..
+cmake .. (Linux)
+cmake .. -G "Ninja" (Windows)
 
 cmake --build .
+ninja (Windows)
 
 This compiles the C++ code and produces Python extension modules (.so files) inside the build/ directory.
 
@@ -61,3 +64,4 @@ Go back to the project root (the folder containing test.py) and run:
 python3 test.py
 
 The script imports the compiled modules from the build/ directory and runs a few example operations.
+On Windows, you will have to run the python script from the "Visual Studio 2026 Developer Command Prompt". I used "v18.8.2".
